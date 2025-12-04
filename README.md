@@ -2,7 +2,7 @@
 
 This project implements a **Sequence-to-Sequence (Seq2Seq) Encoder–Decoder** model using **LSTM networks in TensorFlow/Keras** to translate English sentences into French. The system is trained on a 10,000-sentence bilingual dataset and includes custom preprocessing, tokenization, model building, inference decoding, and BLEU-based evaluation.
 
-## 🔥 Key Features
+## Key Features
 
 - LSTM-based Encoder–Decoder architecture  
 - Custom preprocessing, tokenization, and vocabulary generation  
@@ -11,12 +11,12 @@ This project implements a **Sequence-to-Sequence (Seq2Seq) Encoder–Decoder** m
 - BLEU score evaluation on test samples  
 - Experiments with latent dimensions: 128, 256, 512  
 
-## 📁 Dataset
+## Dataset
 
 The model uses the **fra.txt** bilingual English–French dataset.  
 Only the **last 10,000 sentence pairs** are used for training and evaluation.
 
-## 🧹 Text Preprocessing
+## Text Preprocessing
 
 - Unicode normalization to strip accents  
 - Regex cleaning (lowercasing, punctuation spacing)  
@@ -24,7 +24,7 @@ Only the **last 10,000 sentence pairs** are used for training and evaluation.
 - `<start>` and `<end>` tokens added to French sentences  
 - Padding to max sequence length
 
-## 🧠 Model Architecture
+## Model Architecture
 
 ### Encoder
 - Input: padded English sequences  
@@ -41,7 +41,7 @@ Only the **last 10,000 sentence pairs** are used for training and evaluation.
 - Loss: `sparse_categorical_crossentropy`  
 - Optimizer: `RMSprop`  
 
-## 🚀 Training
+## Training
 
 The model trains for:
 - **10 epochs**
@@ -49,7 +49,7 @@ The model trains for:
 - **80/20 train-test split**
 - Additional **20% validation split** during training  
 
-## 🧪 Evaluation: BLEU Score
+## Evaluation: BLEU Score
 
 BLEU score is computed on a subset (200 samples) of test data using greedy decoding.
 
@@ -60,7 +60,7 @@ Experiments conducted with:
 
 (Insert BLEU scores printed from output here.)
 
-## 📝 Effect of Sequence Length on Performance
+## Effect of Sequence Length on Performance
 
 Sequence length significantly reduces translation quality in vanilla Seq2Seq models:
 
@@ -73,7 +73,7 @@ Sequence length significantly reduces translation quality in vanilla Seq2Seq mod
 A vanilla Seq2Seq LSTM without attention performs poorly on long sequences.  
 Attention mechanisms dramatically improve translation accuracy.
 
-## 📌 Future Work
+## Future Work
 
 - Add Bahdanau/Luong Attention  
 - Use bidirectional encoder  
@@ -81,7 +81,7 @@ Attention mechanisms dramatically improve translation accuracy.
 - Train on larger dataset  
 - Use Transformer-based architecture  
 
-## ▶️ How to Run
+## How to Run
 
 Install dependencies:
 ```
@@ -93,7 +93,7 @@ Run:
 python seq2seq_translation.py
 ```
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 │── seq2seq_translation.py
